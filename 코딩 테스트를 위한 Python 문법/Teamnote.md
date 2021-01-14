@@ -158,12 +158,14 @@ result = [i for i in a if i not in remove_set]
 print(result)  
 ```  
 <hr>  
+
 * ### 문자열 자료형  
   
   * ### 문자열 초기화  
   > 문자열 변수를 초기화할 때는 큰따옴표, 작은따옴표를 사용  
   > 문자열 내부에 큰따옴표를 포함하고 싶을 경우, 초기화를 작은따옴표로 구성  
   > 문자열 내부에 작은따옴표를 포함하고 싶을 경우, 초기화를 큰따옴표로 구성  
+  
   EX )  
   ``` 
   data = "'Hello World'"
@@ -172,6 +174,59 @@ print(result)
   결과 :  
   ```
   'Hello World'
+  ```  
+  > 혹은 백슬래시 (\\) 사용  
+  
+  EX )  
+  ```
+  data = "Don't you know \"Python\"?"
+  print(data)
+  ```
+  결과 :  
+  ```
+  Don't you know "Python"?
+  ```
+  
+  * ### 문자열 연산  
+  > 덧셈 (+) 을 이용하면 단순히 더해져서 연결된다.  
+  
+  EX )  
+  ```
+  a = "Hello"
+  b = "World" 
+  print(a + " " + b) # 중간 띄어쓰기 삽입 
+  ```
+  
+  결과 :  
+  ```
+  Hello World
+  ```
+  
+  > 양의 정수와 곱하면 그 값만큼 여러 번 더해진다.  
+  
+  EX )  
+  ```
+  a = String  
+  print(a * 3)
+  ```
+  
+  결과 :  
+  ```
+  StringStringString 
+  ```
+  
+  > 문자열은 여러 개의 문자가 합쳐진 리스트이다.  
+  > 따라서, 문자열 데이터에 대해서도 인덱싱과 슬라이싱을 이용할 수 있다.  
+  
+  EX )  
+  ```
+  a = "ABCDEF"
+  print(a[2 : 4])  
+  ```
+  
+  결과 :  
+  ```
+  CD
   ```
 
 
