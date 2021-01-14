@@ -1,4 +1,6 @@
 ## 코딩 테스트를 위한 파이썬 문법  
+## 1. 자료형  
+
 * ### round() 함수  
 
 > 소수점 특정 자리수에서 반올림 해주는 함수  
@@ -228,6 +230,84 @@ print(result)
   ```
   CD
   ```
+<hr>  
+
+* ### 튜플 자료형  
+> 리스트와 비슷하나, 다음과 같은 차이가 있다.  
+
+1. 한번 선언된 값은 변경할 수 없다.  
+2. 리스트는 대괄호 [] 를 이용하지만, 튜플은 소괄호 () 를 이용한다.  
+
+EX )  
+```
+a = (1, 2, 3, 4) # 튜플 자료형 선언  
+print(a) 
+
+a[2] = 7 # 불가 ! 에러가 뜬다
+```
+
+*튜플 자료형은 그래프 알고리즘을 구현할 때 자주 사용된다. ex. 우선순위 큐를 활용하는 다익스트라 알고리즘*  
+<hr>  
+
+* ### 사전 자료형  
+> 키 (key) 와 값 (value) 의 쌍을 데이터로 가지는 자료형  
+
+EX )  
+```
+data = dict()
+data['사과'] = 'Apple' 
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+print(data)
+```
+
+결과 :  
+```
+{'사과': 'Apple', '바나나': 'Banana', '코코넛': 'Coconut'}
+```
+
+> 사전 자료형에 특정한 값이 있는지 검사할 때  
+```
+data = dict()
+data['사과'] = 'Apple' 
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+if '사과' in data:
+  print("'사과'를 키로 가지는 데이터가 존재합니다.")
+```
+
+* ### 사전 자료형 관련 함수  
+> keys() 함수 : 키 데이터만 뽑아서 리스트로 이용할 때 
+> values() 함수 : 값 데이터만 뽑아서 리스트로 이용할 때  
+
+```
+data = dict()
+data['사과'] = 'Apple' 
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+# 키 데이터만 담은 리스트 
+key_list = data.keys()
+# 값 데이터만 담은 리스트 
+value_list = data.values()
+print(key_list)
+print(value_list)
+
+# 각 키에 따른 값을 하나씩 출력
+for key in key_list:
+  print(data[key])
+```
+
+결과 :  
+```
+dict_keys(['사과', '바나나', '코코넛'])
+dict_values(['Apple', 'Banana', 'Coconut'])
+Apple
+Banana
+Coconut
+```
 
 
 
